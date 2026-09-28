@@ -46,9 +46,24 @@ options(
 ```
 
 ```{=html}
-<div style="position:absolute; top:10px; right:10px;">
-<img src="Porfa.png" width="150">
-</div>
+<style>
+.logo-ut {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .logo-ut {
+    top: 300px;
+    right: 15px;
+    width: 100px;
+  }
+}
+</style>
+
+<img src="Porfa.png" class="logo-ut">
 ```
 
 ```{=html}
@@ -88,17 +103,6 @@ Cuando se analiza una sola variable, se construye una **distribución de frecuen
 
 Estas herramientas permiten transformar grandes cantidades de información en estructuras organizadas que facilitan la interpretación, comparación y representación gráfica de los datos.
 
-En el contexto de la **Administración Pública**, por ejemplo, pueden utilizarse para estudiar:
-
-- Nivel educativo de los ciudadanos.
-- Tipo de servicio público utilizado.
-- Satisfacción con una entidad estatal.
-- Edad de los usuarios.
-- Ingresos de los hogares.
-- Relación entre nivel educativo y satisfacción.
-- Relación entre género y uso de servicios públicos.
-- Relación entre estrato socioeconómico y acceso a programas sociales.
-
 # Distribución de frecuencias unidimensional
 
 ## Concepto
@@ -118,7 +122,7 @@ La distribución de frecuencias permite determinar cuántas observaciones corres
 Una tabla de frecuencias puede contener las siguientes columnas:
 
 | Símbolo | Nombre | Interpretación |
-|:--:|----|----|
+|:----------------------:|------------------------|------------------------|
 | $x_i$ | Valor o categoría | Valor observado de la variable |
 | $f_i$ | Frecuencia absoluta | Número de veces que aparece $x_i$ |
 | $F_i$ | Frecuencia absoluta acumulada | Número de observaciones hasta $x_i$ |
@@ -837,7 +841,7 @@ $$\alpha=0.05$$
 # Diferencia entre distribución unidimensional y bidimensional
 
 | Característica | Unidimensional | Bidimensional |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | Número de variables | 1 | 2 |
 | Objetivo | Describir una variable | Analizar dos variables conjuntamente |
 | Tabla principal | Tabla de frecuencias | Tabla de contingencia |
